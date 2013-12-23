@@ -4,7 +4,7 @@ module.exports = function(url,callback){
   http.get(url, function(res){
     // error out if needed
     res.on('error',function(){
-      callback(new Error('httpCollect error'))
+      callback(new Error('httpCollect error'));
     });
     
     // pipe the response into concat-stream to collect all of it
